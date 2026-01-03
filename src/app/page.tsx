@@ -705,7 +705,7 @@ export default function BuildDemandPage() {
               {[
                 {
                   name: 'Starter',
-                  price: 'R2,999',
+                  price: 'R8,000',
                   period: '/month',
                   description: 'Perfect for small businesses getting started with web and automation.',
                   features: [
@@ -721,7 +721,7 @@ export default function BuildDemandPage() {
                 },
                 {
                   name: 'Professional',
-                  price: 'R5,999',
+                  price: 'R15,999',
                   period: '/month',
                   description: 'Ideal for growing businesses with higher enquiry volumes.',
                   features: [
