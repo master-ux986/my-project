@@ -134,10 +134,6 @@ export default function BuildDemandPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <Badge className="mb-6 bg-white/10 backdrop-blur-xl border border-white/20 text-emerald-300 hover:bg-white/20">
-                <Zap className="mr-1 h-3 w-3" />
-                Trusted by 200+ South African Businesses
-              </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight mb-6 text-white">
                 Beautiful Websites &
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-600">
@@ -185,28 +181,6 @@ export default function BuildDemandPage() {
                   <span>Risk-free trial</span>
                 </div>
               </div>
-            </motion.div>
-
-            {/* Trust Indicators */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="mt-16 grid grid-cols-3 gap-8 md:gap-12"
-            >
-              {[
-                { value: '200+', label: 'Businesses Automated' },
-                { value: '24/7', label: 'Lead Response Time' },
-                { value: '45%', label: 'Increase in Bookings' },
-              ].map((stat, index) => (
-                <div key={index} className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-blue-500/10 rounded-2xl blur-xl" />
-                  <div className="relative">
-                    <div className="text-3xl md:text-4xl font-bold text-white mb-1">{stat.value}</div>
-                    <div className="text-sm text-slate-400">{stat.label}</div>
-                  </div>
-                </div>
-              ))}
             </motion.div>
           </div>
         </div>
@@ -554,7 +528,7 @@ export default function BuildDemandPage() {
                 Testimonials
               </Badge>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-                Trusted by South African Businesses
+                What Our Clients Say
               </h2>
             </motion.div>
 
@@ -602,18 +576,6 @@ export default function BuildDemandPage() {
                   </Card>
                 </motion.div>
               ))}
-            </div>
-
-            {/* Logos */}
-            <div className="text-center">
-              <p className="text-sm text-slate-400 mb-8">Trusted by businesses across South Africa</p>
-              <div className="flex flex-wrap items-center justify-center gap-8 opacity-50">
-                {['Medical Practices', 'Auto Services', 'Real Estate', 'Legal Services', 'Home Services', 'Consulting'].map((industry, i) => (
-                  <div key={i} className="text-lg font-semibold text-slate-300">
-                    {industry}
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </div>
