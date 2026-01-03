@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import {
   Phone,
@@ -37,19 +36,9 @@ import { Separator } from '@/components/ui/separator'
 import { Badge } from '@/components/ui/badge'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
 
 export default function BuildDemandPage() {
-  const [emailInput, setEmailInput] = useState('')
-  const [isSubmitted, setIsSubmitted] = useState(false)
-
-  const handleSubmitDemo = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (emailInput) {
-      setIsSubmitted(true)
-    }
-  }
+  const CALENDLY_URL = 'https://calendly.com/khensani-builddemandmarketing/30min'
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-slate-950 via-slate-900 to-emerald-950">
@@ -87,7 +76,7 @@ export default function BuildDemandPage() {
               <a href="#demo">Log In</a>
             </Button>
             <Button className="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white border-0 shadow-lg shadow-emerald-500/30" asChild>
-              <a href="#demo">Start Free Demo</a>
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Start Free Demo</a>
             </Button>
           </div>
 
@@ -110,7 +99,7 @@ export default function BuildDemandPage() {
                   <a href="#demo">Log In</a>
                 </Button>
                 <Button className="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white border-0" asChild>
-                  <a href="#demo">Start Free Demo</a>
+                  <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Start Free Demo</a>
                 </Button>
               </div>
             </SheetContent>
@@ -150,7 +139,7 @@ export default function BuildDemandPage() {
                   className="h-14 px-8 text-lg bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white border-0 shadow-xl shadow-emerald-500/30"
                   asChild
                 >
-                  <a href="#demo">
+                  <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
                     Start Free 48-Hour Demo
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
@@ -761,7 +750,7 @@ export default function BuildDemandPage() {
                         variant={plan.popular ? 'default' : 'outline'}
                         asChild
                       >
-                        <a href="#demo">{plan.cta}</a>
+                        <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">{plan.cta}</a>
                       </Button>
                     </div>
                   </Card>
@@ -856,52 +845,16 @@ export default function BuildDemandPage() {
                 Sign up for your free 48-hour demo—no credit card required.
               </p>
 
-              <form onSubmit={handleSubmitDemo} className="max-w-md mx-auto mb-8">
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Input
-                    type="email"
-                    placeholder="Enter your email"
-                    value={emailInput}
-                    onChange={(e) => setEmailInput(e.target.value)}
-                    className="flex-1 h-12 bg-white/10 backdrop-blur-xl border border-white/20 text-white placeholder:text-slate-400 focus:border-emerald-500/50"
-                    required
-                  />
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="h-12 px-8 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white border-0 shadow-xl shadow-emerald-500/30 font-semibold"
-                  >
-                    {isSubmitted ? 'Demo Requested!' : 'Start Free Demo'}
-                  </Button>
-                </div>
-              </form>
-
-              {isSubmitted && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="mb-8 p-4 bg-emerald-500/10 backdrop-blur-xl border border-emerald-500/30 rounded-xl"
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+                <Button
+                  size="lg"
+                  className="h-12 px-8 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white border-0 shadow-xl shadow-emerald-500/30 font-semibold"
+                  asChild
                 >
-                  <p className="font-semibold text-white">🎉 Excellent choice!</p>
-                  <p className="text-slate-300 text-sm mt-1">
-                    We'll be in touch within 24 hours to set up your free demo.
-                  </p>
-                </motion.div>
-              )}
-
-              <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-400">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-emerald-400" />
-                  <span>48-hour free trial</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-emerald-400" />
-                  <span>No credit card required</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-emerald-400" />
-                  <span>Setup in 10 minutes</span>
-                </div>
+                  <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+                    Start Free Demo
+                  </a>
+                </Button>
               </div>
             </motion.div>
           </div>
@@ -933,7 +886,7 @@ export default function BuildDemandPage() {
               <ul className="space-y-2 text-sm text-slate-400">
                 <li><a href="#features" className="hover:text-white transition-colors">Services</a></li>
                 <li><a href="#pricing" className="hover:text-white transition-colors">Pricing</a></li>
-                <li><a href="#demo" className="hover:text-white transition-colors">Free Demo</a></li>
+                <li><a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Free Demo</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Case Studies</a></li>
               </ul>
             </div>
