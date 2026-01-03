@@ -14,24 +14,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Z.ai Code Scaffold - AI-Powered Development",
-  description: "Modern Next.js scaffold optimized for AI-powered development with Z.ai. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "Z.ai Team" }],
+  title: "Build Demand - AI Automation & Web Development",
+  description: "Build stunning, conversion-focused websites and power them with AI automation that captures leads, answers enquiries, and books appointments 24/7. Serving South African businesses.",
+  keywords: ["Build Demand", "AI automation", "web development", "Next.js", "TypeScript", "South Africa", "lead generation", "WhatsApp automation", "booking automation"],
+  authors: [{ name: "Build Demand" }],
   icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
+    icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
-    url: "https://chat.z.ai",
-    siteName: "Z.ai",
+    title: "Build Demand - Beautiful Websites & Intelligent Automation",
+    description: "Build Demand creates stunning websites and AI automation for South African businesses. Capture leads 24/7 with WhatsApp automation and smart booking systems.",
+    url: "https://builddemandmarketing.com",
+    siteName: "Build Demand",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
+    title: "Build Demand - AI Automation & Web Development",
+    description: "Beautiful websites and AI automation for South African businesses",
   },
 };
 
