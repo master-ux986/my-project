@@ -928,8 +928,8 @@ export default function BuildDemandPage() {
               <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a>
               <a href="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</a>
               <a href="/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</a>
-            </div> e99b34ce88216f99041e2e45aaff948b4a2ad20d
             </div>
+          </div>
           </div>
         </div>
       </footer>
