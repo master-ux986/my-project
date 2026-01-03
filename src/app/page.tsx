@@ -925,9 +925,9 @@ export default function BuildDemandPage() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-400">
             <p>© 2025 Build Demand. All rights reserved.</p>
             <div className="flex gap-6">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
+              <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</a>
+              <a href="/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</a>
             </div>
           </div>
         </div>
